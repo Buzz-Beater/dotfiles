@@ -151,3 +151,4 @@ cd ~/Library
 
 # # Removing folders from sidebar
 # # Edit the file in /etc/xdg/user-dirs.defaults
+# # the configuration in ~/.config/user-dirs.dirs should also be changed according to need

@@ -1,2 +1,0 @@
-# dotfiles
-Setup for system
