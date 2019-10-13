@@ -97,10 +97,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH='/usr/local/cuda-10.0/bin/:/usr/local/cuda-10.0/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
-export LD_LIBRARY_PATH='/usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/lib64:'
+export PATH='/usr/local/cuda-10.1/bin/:/usr/local/cuda-10.1/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export LD_LIBRARY_PATH='/usr/local/cuda-10.1/lib64:/usr/local/cuda-10.1/lib64:'
 
 # Virtualenvwrapper Configurations
-export WORKON_HOME='/media/hdd/home/baoxiong/Envs'
+export WORKON_HOME='/mnt/hdd/home/baoxiong/Envs'
 export PROJECT_HOME='$HOME/Projects'
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
