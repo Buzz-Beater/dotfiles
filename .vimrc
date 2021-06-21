@@ -82,6 +82,7 @@ inoremap jk <Esc>
 inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap hh <Esc>
+inoremap ii <Esc>
 " inoremap ll <Esc>
 
 
