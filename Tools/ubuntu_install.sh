@@ -8,7 +8,7 @@ sudo apt install notify-osd overlay-scrollbar unity-tweak-tool gnome-tweak-tool 
 sudo apt install texmaker vim emacs vlc inkscape ffmpeg -y
 
 # system libraries
-sudo apt install synaptic openssh-server htop git gitk ntpdate npm timelimit ppa-purge gnome-shell-extension-system-monitor tree tmux -y
+sudo apt install synaptic openssh-server htop git gitk ntpdate npm timelimit ppa-purge gnome-shell-extension-manager gnome-shell-extension-system-monitor tree tmux -y
 
 # building tools (gcc 4.7/4.9, g++ 4.7/4.9 obsolete)
 sudo apt install cmake-qt-gui cmake-curses-gui clang clanqwg-format -y
@@ -23,8 +23,8 @@ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 30
 # python related
 sudo apt install ipython python python3 python-pip python3-pip python3-xlib python3-pillow python3-pyqt5 python3-requests virtualenvwrapper python-pygame python-scipy python-dev python-tk python-imaging-tk -y
 
-# libraries 
-sudo apt install curl i3 mesa-utils scons petsc-dev freeglut3-dev libmetis-dev libopenvdb-dev libgtest-dev libzmqpp-dev liblua5.2-dev libzmqpp-dev libilmbase-dev libopenexr-dev compizconfig-settings-manager avahi-daemon avahi-discover avahi-utils libnss-mdns mdns-scan linux-image-extra-virtual p7zip-full unrar-free imagemagick kolourpaint4 libspatialindex-dev libgeos-dev liblapack-dev libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler shutter redshift redshift-gtk libglew-dev libglfw3-dev alien libcgal-dev libcgal-qt5-dev gstreamer1.0-libav libturbojpeg libjpeg-turbo8-dev meld swig python-qt4 libmagick++-dev libcsfml-dev gtk-recordmydesktop tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-sim lm-sensors graphviz-dev samba-common-bin llvm-dev libglm-dev ntp -y
+# libraries
+sudo apt install libsparsehash-dev curl i3 mesa-utils scons petsc-dev freeglut3-dev libmetis-dev libopenvdb-dev libgtest-dev libzmqpp-dev liblua5.2-dev libzmqpp-dev libilmbase-dev libopenexr-dev compizconfig-settings-manager avahi-daemon avahi-discover avahi-utils libnss-mdns mdns-scan linux-image-extra-virtual p7zip-full unrar-free imagemagick kolourpaint4 libspatialindex-dev libgeos-dev liblapack-dev libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler shutter redshift redshift-gtk libglew-dev libglfw3-dev alien libcgal-dev libcgal-qt5-dev gstreamer1.0-libav libturbojpeg libjpeg-turbo8-dev meld swig python-qt4 libmagick++-dev libcsfml-dev gtk-recordmydesktop tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-sim lm-sensors graphviz-dev samba-common-bin llvm-dev libglm-dev ntp -y
 
 # time and date fix
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z" && sudo hwclock --systohc && ntpdate -d time1.ucla.edu
@@ -32,12 +32,13 @@ sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -
 # Newest NVIDIA driver available, official ppa 
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
+# install drivers according to available version numbers
 
 # upgrade
 sudo apt update && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
 
 # personal theme
-sudo add-apt-repository ppa:numix/ppa
+sudo add-apt-repository ppa:numix/ppa -y
 sudo apt-add-repository ppa:papirus/papirus -y # icon
 sudo apt update
 sudo apt install numix-icon-theme numix-icon-theme-circle papirus-icon-theme -y
